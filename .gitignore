@@ -1,2 +1,2 @@
-/code/node_modules
-/code/dist
+/code-v?/node_modules
+/code-v?/dist
