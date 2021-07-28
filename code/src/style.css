@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('./JetBrainsMono.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  font-family: 'JetBrainsMono';
+}
+
+.hello {
+  color: slategray;
+  background: url('./arrow.png');
+}
