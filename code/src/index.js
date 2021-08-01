@@ -1,7 +1,7 @@
-// import _ from 'lodash';
+import _ from 'lodash';
 
 import prefetch from './prefetch.js';
-import eat from './print.js';
+// import eat from './print.js';
 
 prefetch();
 
@@ -54,8 +54,8 @@ const button = dom.button('Click Me').onClick((e) => {
   });
 });
 
-const eatButton = dom.button('eat').onClick(eat.bind(null, body));
+// const eatButton = dom.button('eat').onClick(et.abind(null, body));
 
 // const app = dom.div(_.join(['Hi', 'tanglo'], ' '));
 
-body.child('hi gago', button, eatButton);
+body.child('hi gago', button);

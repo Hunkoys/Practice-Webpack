@@ -4,9 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
-  // devtool: 'inline-source-map',
+  devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist',
+    open: '/mnt/c/Program Files/Google/Chrome/Application/chrome.exe',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -19,6 +20,7 @@ module.exports = {
     clean: true,
   },
   optimization: {
+    moduleIds: 'deterministic',
     runtimeChunk: 'single',
     splitChunks: {
       cacheGroups: {
