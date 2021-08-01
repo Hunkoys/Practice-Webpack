@@ -1,2 +1,5 @@
 /code/node_modules
 /code/dist
+
+/library/node_modules
+/library/dist
