@@ -1,6 +1,9 @@
 // import _ from 'lodash';
 
+import prefetch from './prefetch.js';
 import eat from './print.js';
+
+prefetch();
 
 function isString(data) {
   return data instanceof String || typeof data === 'string';
@@ -35,12 +38,24 @@ const dom = {
   },
 };
 
+async function getDiv() {
+  const { default: _ } = await import('lodash');
+
+  const element = dom.div(_.join(['gago', 'gid', 'eh'], ' '));
+
+  return element;
+}
+
 const body = new SuperDom(document.getElementsByTagName('body')[0]);
 
 const button = dom.button('Click Me').onClick((e) => {
-  eat();
+  getDiv().then((element) => {
+    body.child(element);
+  });
 });
 
-const app = dom.div('hello there ');
+const eatButton = dom.button('eat').onClick(eat.bind(null, body));
 
-body.child('hi gago', app, button);
+// const app = dom.div(_.join(['Hi', 'tanglo'], ' '));
+
+body.child('hi gago', button, eatButton);
