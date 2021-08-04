@@ -2,13 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env) => {
-  const B = env.WEBPACK_BUILD;
-  const S = env.WEBPACK_SERVE;
+  const BUILD = env.WEBPACK_BUILD;
+  const SERVE = env.WEBPACK_SERVE;
 
   return {
-    mode: B ? 'production' : 'development',
+    mode: BUILD ? 'production' : 'development',
     entry: './src/index.js',
-    ...(S && { devtool: 'eval-source-map' }),
+    ...(SERVE && { devtool: 'eval-source-map' }),
     devServer: {
       contentBase: './dist',
       open: '/mnt/c/Program Files/Google/Chrome/Application/chrome.exe',

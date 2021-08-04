@@ -1,6 +1,11 @@
-import _ from 'lodash';
+import { Ride } from './comps/Bike.js';
+import join from 'lodash/join';
 
-import prefetch from './prefetch.js';
+// function join(arr, sep) {
+//   return arr.reduce((acc, i) => acc + sep + i);
+// }
+
+// import prefetch from './prefetch.js';
 // import eat from './print.js';
 
 prefetch();
@@ -38,10 +43,8 @@ const dom = {
   },
 };
 
-async function getDiv() {
-  const { default: _ } = await import('lodash');
-
-  const element = dom.div(_.join(['gago', 'gid', 'eh'], ' '));
+function getDiv() {
+  const element = dom.div(join(['gago', 'gid', 'eh'], ' '));
 
   return element;
 }
@@ -54,8 +57,17 @@ const button = dom.button('Click Me').onClick((e) => {
   });
 });
 
-// const eatButton = dom.button('eat').onClick(et.abind(null, body));
+const eatButton = dom.button('eat').onClick((e) => {
+  const all = ['Bike', 'Name'];
 
-// const app = dom.div(_.join(['Hi', 'tanglo'], ' '));
+  // for (const c of all) {
+  //   const u = require('./comps/' + c + '.js');
+  //   console.log(u.default);
+  // }
 
-body.child('hi gago', button);
+  Ride();
+});
+
+// const app = dom.div(join(['Hi', 'tanglo'], ' '));
+
+body.child('hi gago', button, eatButton);

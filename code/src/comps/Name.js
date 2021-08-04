@@ -1,0 +1,1 @@
+export default 'Niko las';
