@@ -61,4 +61,5 @@ console.log(carl);
 
 body.child('hi gago', button, eatButton);
 
+console.log('process.env.NODE_ENV');
 console.log(process.env.NODE_ENV);
