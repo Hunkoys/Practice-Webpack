@@ -1,15 +1,3 @@
-import { Ride } from './comps/Bike.js';
-import join from 'lodash/join';
-
-// function join(arr, sep) {
-//   return arr.reduce((acc, i) => acc + sep + i);
-// }
-
-// import prefetch from './prefetch.js';
-// import eat from './print.js';
-
-prefetch();
-
 function isString(data) {
   return data instanceof String || typeof data === 'string';
 }
@@ -44,7 +32,7 @@ const dom = {
 };
 
 function getDiv() {
-  const element = dom.div(join(['gago', 'gid', 'eh'], ' '));
+  const element = dom.div();
 
   return element;
 }
@@ -64,10 +52,10 @@ const eatButton = dom.button('eat').onClick((e) => {
   //   const u = require('./comps/' + c + '.js');
   //   console.log(u.default);
   // }
-
-  Ride();
 });
 
 // const app = dom.div(join(['Hi', 'tanglo'], ' '));
 
 body.child('hi gago', button, eatButton);
+
+console.log(process.env.NODE_ENV);
