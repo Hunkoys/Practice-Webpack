@@ -1,4 +1,5 @@
 import print, { carl, growCarl } from './print';
+import './style.css';
 
 print();
 
