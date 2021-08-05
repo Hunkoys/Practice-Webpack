@@ -2,15 +2,17 @@ import print, { carl, growCarl } from './print';
 
 print();
 
-function isString(data) {
+function isString(data: any) {
   return data instanceof String || typeof data === 'string';
 }
 class SuperDom {
-  constructor(element) {
+  constructor(element: Element) {
     this.e = element;
   }
 
-  child(...children) {
+  e
+
+  child(...children: any[]) {
     for (const child of children) {
       if (child instanceof SuperDom) this.e.append(child.e);
       else if (child instanceof Node || isString(child)) this.e.append(child);
@@ -19,7 +21,7 @@ class SuperDom {
     return this;
   }
 
-  onClick(task) {
+  onClick(task: any) {
     this.e.addEventListener('click', task);
 
     return this;
@@ -27,10 +29,10 @@ class SuperDom {
 }
 
 const dom = {
-  div(...children) {
+  div(...children: any[]) {
     return new SuperDom(document.createElement('div')).child(...children);
   },
-  button(...children) {
+  button(...children: any[]) {
     return new SuperDom(document.createElement('button')).child(...children);
   },
 };
@@ -43,16 +45,13 @@ function getDiv() {
 
 const body = new SuperDom(document.getElementsByTagName('body')[0]);
 
-const button = dom.button('Click Me').onClick((e) => {
-  getDiv().then((element) => {
-    body.child(element);
-  });
+const button = dom.button('Click Me').onClick(() => {
+  
 });
 
-const eatButton = dom.button('eat').onClick((e) => {
+const eatButton = dom.button('eat').onClick(() => {
   growCarl();
   console.log(carl);
-  carl = ' tang';
 });
 
 console.log(carl);
