@@ -1,3 +1,7 @@
+import print, { carl, growCarl } from './print';
+
+print();
+
 function isString(data) {
   return data instanceof String || typeof data === 'string';
 }
@@ -46,13 +50,12 @@ const button = dom.button('Click Me').onClick((e) => {
 });
 
 const eatButton = dom.button('eat').onClick((e) => {
-  const all = ['Bike', 'Name'];
-
-  // for (const c of all) {
-  //   const u = require('./comps/' + c + '.js');
-  //   console.log(u.default);
-  // }
+  growCarl();
+  console.log(carl);
+  carl = ' tang';
 });
+
+console.log(carl);
 
 // const app = dom.div(join(['Hi', 'tanglo'], ' '));
 
