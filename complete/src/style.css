@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'HelveticaNow';
+  src: url('./index/fonts/HelveticaNowText-Regular.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  font-family: 'HelveticaNow', Arial, Helvetica, sans-serif;
+  background: pink;
+}
+
+.heading1 {
+  font-size: 2em;
+}
+
+#app {
+  border: 3px solid #555555;
+  border-radius: 10px;
+}
