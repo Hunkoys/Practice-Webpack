@@ -3,9 +3,14 @@ const path = require('path');
 module.exports = {
   entry: './src/index.ts',
   output: {
-    filename: 'main.js',
+    filename: '[name].main.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   module: {
     rules: [
