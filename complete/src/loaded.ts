@@ -1,5 +1,6 @@
-import * as _ from 'lodash';
+import { join } from 'lodash-es';
+
 
 export default function () {
-  console.log(_.join(["I'm here too!",' Hehe'], ' ' ));
+  console.log(join(["I'm here too!",' Hehe'], ' ' ));
 }

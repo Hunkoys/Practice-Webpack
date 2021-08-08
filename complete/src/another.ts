@@ -1,3 +1,3 @@
-import _ from 'lodash';
+import { join } from 'lodash-es';
 
-export default () => console.log(_.join(['hi', 'there'], ' '));
+export default () => console.log(join(['hi', 'Tanglo'], ' '));

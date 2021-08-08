@@ -3,14 +3,22 @@ const path = require('path');
 module.exports = {
   entry: './src/index.ts',
   output: {
-    filename: '[name].main.js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
   optimization: {
+    moduleIds: 'deterministic',
     splitChunks: {
-      chunks: 'all',
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
     },
+    runtimeChunk: 'single',
   },
   module: {
     rules: [
