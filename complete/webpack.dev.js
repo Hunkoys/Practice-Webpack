@@ -9,6 +9,14 @@ module.exports = merge(common, {
   devServer: {
     contentBase: './dist',
   },
+  module: {
+    rules: [
+      {
+        test: /\.(scss|sass)$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
+  },
 
   plugins: [
     new HtmlWebpackPlugin({

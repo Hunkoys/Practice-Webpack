@@ -1,4 +1,5 @@
 const path = require('path');
+const miniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/index.ts',
@@ -51,6 +52,11 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new miniCssExtractPlugin({
+      filename: '[name].css',
+    }),
+  ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },

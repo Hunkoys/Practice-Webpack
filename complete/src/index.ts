@@ -1,5 +1,5 @@
 import app from './index/app';
-import './style.css'
+import './style.scss'
 
 const main = document.getElementById('main');
 
