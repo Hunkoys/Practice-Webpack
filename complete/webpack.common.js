@@ -1,5 +1,6 @@
 const path = require('path');
-const miniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   entry: './src/index.ts',
@@ -20,6 +21,7 @@ module.exports = {
       },
     },
     runtimeChunk: 'single',
+    minimizer: [`...`, new CssMinimizerPlugin()],
   },
   module: {
     rules: [
@@ -53,8 +55,9 @@ module.exports = {
     ],
   },
   plugins: [
-    new miniCssExtractPlugin({
+    new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
+      chunkFilename: '[id].[contenthash].css',
     }),
   ],
   resolve: {
