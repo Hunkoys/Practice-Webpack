@@ -13,6 +13,7 @@ module.exports = merge(common, {
   plugins: [
     new HtmlWebpackPlugin({
       title: '(Served) ' + project.title,
+      template: 'src/index.html',
     }),
   ],
 });
