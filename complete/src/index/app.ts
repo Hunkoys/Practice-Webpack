@@ -3,6 +3,8 @@ import iFelicia from './images/pictures/-i-Felicia.png';
 import fFelicia from './images/-i-pictures/Felicia.png';
 import extFelicia from 'Img/Felicia.png';
 
+import './app.scss';
+
 const App = document.createElement('div');
 
 function img(src: string, alt: string) {
