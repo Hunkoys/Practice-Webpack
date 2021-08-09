@@ -61,6 +61,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
       Utilities: path.resolve(__dirname, 'src/utilities'),
+      Img: path.resolve(__dirname, 'img'),
     },
   },
 };
