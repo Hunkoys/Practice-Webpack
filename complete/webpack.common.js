@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: './src/index.ts',
@@ -64,4 +65,6 @@ module.exports = {
       Img: path.resolve(__dirname, 'img'),
     },
   },
+  target: 'node',
+  externals: [nodeExternals()],
 };

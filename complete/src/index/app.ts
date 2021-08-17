@@ -20,6 +20,10 @@ function img(src: string, alt: string) {
 // const folderFelicia = img(fFelicia, 'resource')
 const externalFelicia = img(extFelicia, 'resource')
 
-App.append( externalFelicia);
+const greeting = document.createElement('h1');
+greeting.className = 'greeting1 purple';
+greeting.innerText = 'Hi there'
+
+App.append(externalFelicia, greeting);
 
 export default App;
