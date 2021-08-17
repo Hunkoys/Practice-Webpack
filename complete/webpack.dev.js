@@ -1,9 +1,7 @@
-const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const common = require('./webpack.common.js');
-const project = require('./project.js');
+const project = require('./project');
 
-module.exports = merge(common, {
+module.exports = {
   mode: 'development',
   devtool: 'eval-source-map',
   devServer: {
@@ -24,4 +22,4 @@ module.exports = merge(common, {
       template: 'src/index.html',
     }),
   ],
-});
+};

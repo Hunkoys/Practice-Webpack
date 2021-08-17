@@ -1,10 +1,8 @@
-const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const common = require('./webpack.common.js');
-const project = require('./project.js');
+const project = require('./project');
 
-module.exports = merge(common, {
+module.exports = {
   mode: 'production',
   devtool: 'source-map',
 
@@ -22,4 +20,4 @@ module.exports = merge(common, {
       template: 'src/index.html',
     }),
   ],
-});
+};

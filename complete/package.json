@@ -5,8 +5,8 @@
   "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.prod.js",
-    "start": "webpack serve --open '/mnt/c/Program Files/Google/Chrome/Application/Chrome.exe' --config webpack.dev.js"
+    "build": "NODE_ENV=production webpack --config 'config/webpack.js'",
+    "start": "NODE_ENV=development webpack serve --open '/mnt/c/Program Files/Google/Chrome/Application/Chrome.exe' --config 'config/webpack.js'"
   },
   "keywords": [],
   "author": "",
