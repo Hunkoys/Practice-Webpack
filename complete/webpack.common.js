@@ -58,10 +58,12 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
       Utilities: path.resolve(__dirname, 'src/utilities'),
-      Img: path.resolve(__dirname, 'img'),
+      Images: path.resolve(__dirname, 'src/index/images'),
+      '🏠': path.resolve(__dirname, 'src'),
+      ROOT: path.resolve(__dirname, './'),
     },
   },
 };

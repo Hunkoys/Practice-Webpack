@@ -4,7 +4,9 @@
     "baseUrl": "./",
     "paths": {
       "Utilities/*": ["src/utilities/*"],
-      "Img/*": ["img/*"]
+      "Images/*": ["src/index/images/*"],
+      "🏠/*": ["src/*"],
+      "ROOT/*": ["./*"]
     },
     "sourceMap": true,
     "noImplicitAny": true,

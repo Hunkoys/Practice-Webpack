@@ -1,20 +1,15 @@
-// import Felicia from './images/pictures/Felicia.png';
+import smallArrow from 'Images/pictures/-i-small-arrow.png';
 // import iFelicia from './images/pictures/-i-Felicia.png';
 // import fFelicia from './images/-i-pictures/Felicia.png';
-import extFelicia from 'Img/Felicia.png';
+import extFelicia from 'Images/pictures/Felicia.png';
+
+import img from './img';
 
 import './app.scss';
 
 const App = document.createElement('div');
 
-function img(src: string, alt: string) {
-  const elem = document.createElement('img');
-  elem.src = src;
-  elem.alt = alt;
-  
-  return elem;
-}
-
+const arrowImg = img(smallArrow, 'inline');
 // const inlineFelicia = img(iFelicia, 'inline');
 // const resourceFelicia = img(Felicia, 'resource')
 // const folderFelicia = img(fFelicia, 'resource')
@@ -24,6 +19,6 @@ const greeting = document.createElement('h1');
 greeting.className = 'greeting1 purple';
 greeting.innerText = 'Hi there'
 
-App.append(externalFelicia, greeting);
+App.append(arrowImg, externalFelicia, greeting);
 
 export default App;
