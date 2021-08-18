@@ -38,6 +38,4 @@ function findConfigFor(NODE_ENV) {
   throwEnvError(NODE_ENV);
 }
 
-console.log(findConfigFor(NODE_ENV));
-
 module.exports = findConfigFor(NODE_ENV);

@@ -1,3 +1,3 @@
 module.exports = {
-  title: 'Basic',
+  title: 'React App',
 };

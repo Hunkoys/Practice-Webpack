@@ -1,0 +1,30 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "chrome": "63",
+          "edge": "16",
+          "firefox": "57",
+          "safari": "11",
+          "opera": "49"
+        }
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    [
+      "auto-import",
+      {
+        "declarations": [
+          {
+            "default": "React",
+            "path": "react"
+          }
+        ]
+      }
+    ]
+  ]
+}
